@@ -11,6 +11,7 @@ namespace dbSQL
         string vendedor;
         decimal comision;
 
+        #region ----------------------- Propiedades -----------------------------------------
 
         public string Vendedor
         {
@@ -39,6 +40,7 @@ namespace dbSQL
             }
         }
 
+        #endregion
 
 
         public List<clsVendedorII> Consultar()
@@ -47,11 +49,24 @@ namespace dbSQL
             List<object> ListaObjetos = new List<object>();
 
             ListaObjetos = clsDatos.Consultar(this, "spVendedorMostrar");
-            
+  
             foreach (object obj in ListaObjetos)
                 ListaVendedores.Add(objToVendedor(obj));
 
               return ListaVendedores;
+        }
+
+        public List<clsVendedorII> Consultar(string Buscar)
+        {
+            List<clsVendedorII> ListaVendedores = new List<clsVendedorII>();
+            List<object> ListaObjetos = new List<object>();
+      
+            ListaObjetos = clsDatos.Consultar(this, "spVendedorMostrar", Buscar);
+
+            foreach (object obj in ListaObjetos)
+                ListaVendedores.Add(objToVendedor(obj));
+
+            return ListaVendedores;
         }
 
         private clsVendedorII objToVendedor(Object obj)
@@ -63,8 +78,6 @@ namespace dbSQL
 
             return oVen;
         }
-
-
 
     }
 }

@@ -69,6 +69,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tbBuscar = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -433,11 +434,21 @@
             this.tbBuscar.Size = new System.Drawing.Size(241, 20);
             this.tbBuscar.TabIndex = 40;
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(18, 453);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(116, 13);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "Ejemplo con Reflection";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 475);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.tbBuscar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.tbIdVendedor);
@@ -531,6 +542,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox tbBuscar;
+        private System.Windows.Forms.Label label16;
     }
 }
 

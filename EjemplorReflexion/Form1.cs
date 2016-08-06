@@ -170,10 +170,10 @@ namespace EjemplorReflexion
             switch (ind)
             {
                 case 0:
-                    dgvDatos.DataSource = oVendedor.Consultar();
+                    dgvDatos.DataSource = oVendedor.Consultar(tbBuscar.Text);
                     break;
                 case 1:
-                    dgvDatos.DataSource = oArticulos.Consultar();
+                    dgvDatos.DataSource = oArticulos.Consultar(tbBuscar.Text);
                     break;
 
                 case 2:

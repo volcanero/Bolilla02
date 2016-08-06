@@ -44,7 +44,6 @@ namespace dbSQL
 
         }
 
-
         public static List<object> Consultar(object obj, string Procedimiento, SqlParameter[] param)
         {
             List<object> objs = new List<object>();
@@ -76,9 +75,6 @@ namespace dbSQL
             
             return objs;
          }
-
-
-
 
         public static List<object> Consultar(object obj, string Procedimiento)
         {
@@ -112,12 +108,10 @@ namespace dbSQL
             return objs;
         }
 
-
-
         public static List<object> Consultar(object obj, string Procedimiento, string Dato)
         {
             List<object> objs = new List<object>();
-            DataTable dt = clsDb.Consultar(Procedimiento);
+            DataTable dt = clsDb.Consultar(Procedimiento, Dato);
 
             Type Tipo = obj.GetType();
 
@@ -145,9 +139,6 @@ namespace dbSQL
 
             return objs;
         }
-
-
-
 
     }
 }

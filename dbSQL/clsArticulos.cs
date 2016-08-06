@@ -65,17 +65,28 @@ namespace dbSQL
 
             ListaObjetos = clsDatos.Consultar(this, "spArticulosMostrar");
 
-
             foreach (object obj in ListaObjetos)
-            {
-
-                ListaArticulos.Add(objToArticulos(obj));
-
-            }
-
+                  ListaArticulos.Add(objToArticulos(obj));
 
             return ListaArticulos;
         }
+
+
+        public List<clsArticulos> Consultar(string Buscar)
+        {
+
+            List<clsArticulos> ListaArticulos = new List<clsArticulos>();
+            List<object> ListaObjetos = new List<object>();
+
+            ListaObjetos = clsDatos.Consultar(this, "spArticulosMostrar", Buscar);
+
+            foreach (object obj in ListaObjetos)
+                ListaArticulos.Add(objToArticulos(obj));
+
+            return ListaArticulos;
+        }
+
+
 
 
         private clsArticulos objToArticulos(Object obj)
